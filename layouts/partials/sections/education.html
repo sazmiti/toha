@@ -57,12 +57,15 @@
                                 <h6 class="text-muted">{{ i18n "taken_courses"}}</h6>
                                 {{ if .takenCourses.showGrades }}
                                 {{ $hideScale  := .takenCourses.hideScale }}
+                                {{ $showRank  := .takenCourses.showRank }}
                                 <table>
                                     <thead>
                                         <th>{{ i18n "course_name"}}</th>
                                         {{ if not $hideScale  }}
+                                        {{ if $showRank }}
                                         <th>{{ i18n "position"}}</th>
                                         <th>{{ i18n "max_position"}}</th>
+                                        {{ end }}
                                         <th>{{ i18n "obtained_grade"}}</th>
                                         <th>{{ i18n "max_grade"}}</th>
                                         {{ end }}
@@ -72,8 +75,10 @@
                                         <tr class="course {{ if gt $index 1 }}hidden-course{{ end}}">
                                             <td>{{ $course.name }}</td>
                                             {{ if not $hideScale  }}
+                                            {{ if $showRank }}
                                             <td>{{ $course.position }}</td>
                                             <td>{{ $course.max_position }}</td>
+                                            {{ end }}
                                             <td>{{ $course.achieved }}</td>
                                             <td>{{ $course.outOf }}</td>
                                             {{ end }}
