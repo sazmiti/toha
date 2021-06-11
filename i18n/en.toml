@@ -112,3 +112,16 @@ other = "Notes"
 
 [disclaimer_text]
 other = "Liability Notice"
+
+# More by Samuel Vannier
+[obtained_grade]
+other = "Grade"
+
+[max_grade]
+other = "Max grade"
+
+[position]
+other = "Rank"
+
+[max_position]
+other = "Students"

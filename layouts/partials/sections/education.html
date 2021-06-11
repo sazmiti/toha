@@ -60,15 +60,23 @@
                                 <table>
                                     <thead>
                                         <th>{{ i18n "course_name"}}</th>
-                                        {{ if not $hideScale  }}<th>{{ i18n "total_credit"}}</th>{{ end }}
-                                        <th>{{ i18n "obtained_credit"}}</th>
+                                        {{ if not $hideScale  }}
+                                        <th>{{ i18n "position"}}</th>
+                                        <th>{{ i18n "max_position"}}</th>
+                                        <th>{{ i18n "obtained_grade"}}</th>
+                                        <th>{{ i18n "max_grade"}}</th>
+                                        {{ end }}
                                     </thead>
                                     <tbody>
                                         {{ range $index,$course := .takenCourses.courses }}
                                         <tr class="course {{ if gt $index 1 }}hidden-course{{ end}}">
                                             <td>{{ $course.name }}</td>
-                                            {{ if not $hideScale  }}<td>{{ $course.outOf }}</td>{{ end }}
+                                            {{ if not $hideScale  }}
+                                            <td>{{ $course.position }}</td>
+                                            <td>{{ $course.max_position }}</td>
                                             <td>{{ $course.achieved }}</td>
+                                            <td>{{ $course.outOf }}</td>
+                                            {{ end }}
                                         </tr>
                                         {{ end }}
                                     </tbody>

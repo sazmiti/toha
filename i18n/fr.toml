@@ -112,3 +112,17 @@ other = "Remarques"
 
 [disclaimer_text]
 other = "Avis de responsabilité"
+
+
+# More by Samuel Vannier
+[obtained_grade]
+other = "Notes"
+
+[max_grade]
+other = "Note maximale"
+
+[position]
+other = "Classement"
+
+[max_position]
+other = "Élèves"
